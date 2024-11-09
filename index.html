@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>TD19's TI Map Analyzer</title>
+        <link rel="stylesheet" href="/styles-4786c559657e025b.css" integrity="sha384&#x2D;CmQ&#x2F;uKpyHc&#x2B;ql&#x2B;JF4pSR3vC4qUiNWhmoMeBsZB&#x2F;Sy8q5f3zeg&#x2B;5u7M&#x2B;y6Q7SlVkb"/>
+        
+    
+<link rel="modulepreload" href="/ti-map-analyzer-e73279553d254fee.js" crossorigin=anonymous integrity="sha384-3wHjQiigMxE3GzHVo+YJXBPTkbT7twvssHflFBM2Dhps+yLe8a1PUhpN+e8T6UtT">
+<link rel="preload" href="/ti-map-analyzer-e73279553d254fee_bg.wasm" crossorigin=anonymous integrity="sha384-D7J2QlyqfgQzVfwLUEmPLLdcBQYPzenJySxWJkgDdswKgtkTRwqYoWNxcKDVE0Rg" as="fetch" type="application/wasm"></head>
+    <body>
+<script type="module" nonce="5bAlkZ4lqu2dKmdcAyhj4g==">
+import init, * as bindings from '/ti-map-analyzer-e73279553d254fee.js';
+const wasm = await init('/ti-map-analyzer-e73279553d254fee_bg.wasm');
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
