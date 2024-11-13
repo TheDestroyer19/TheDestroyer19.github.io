@@ -96,7 +96,7 @@ h6 {
 
 .hex {
   color: white;
-  background-color: magenta;
+  background-color: transparent;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -113,18 +113,26 @@ h6 {
 }
 
 .hex-highlighted {
-  filter: brightness(1.5);
+  background-color: #5555cc;
   transform-origin: center;
-  transform: scale(110%);
+  transform: scale(120%);
 }
 
-.hex:hover {
-  filter: brightness(2);
-  font-weight: 600;
+.hex-highlighted > * {
+  transform: scale(91%);
 }
 
 body {
   --hex-size: 1.5rem;
+}
+
+p {
+  max-width: 40ch;
+  margin-bottom: 0.5rem;
+}
+
+li {
+  max-width: 40ch;
 }
 
 #main {
@@ -219,26 +227,23 @@ body {
 }
 
 .tile-Empty {
-  background-color: rgb(20, 20, 39);
+  background-image: url("/assets/tile-empty.webp");
 }
 
 .tile-System {
-  background-color: transparent;
   background-image: url("/assets/tile-system.webp");
 }
 
 .tile-Home {
-  background-color: transparent;
   background-image: url("/assets/tile-home.webp");
 }
 
 .tile-Rex {
-  background-color: transparent;
   background-image: url("/assets/tile-rex.webp");
 }
 
 .tile-Hyperlane {
-  background-color: rgb(20, 20, 39);
+  background-image: url("/assets/lanes/lanebg.webp");
 }
 
 .tile-rotate {
@@ -255,6 +260,16 @@ body {
   display: inline-flex;
   gap: 0.5rem;
   align-items: center;
+}
+
+.tool-cursor {
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  font-size: 0.5rem;
+  --hex-size: 1rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 .stats-table {
